@@ -1,0 +1,203 @@
+/* Media Queries */
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    #nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-bar li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    #header h1 {
+        font-size: 24px;
+    }
+
+    #header-img {
+        height: 40px;
+    }
+}
+
+/* Tablets (min-width: 601px) and (max-width: 1200px) */
+@media (min-width: 601px) and (max-width: 1200px) {
+    #header h1 {
+        font-size: 28px;
+    }
+
+    #header-img {
+        height: 45px;
+    }
+}
+
+/* Desktops (min-width: 1201px) */
+@media (min-width: 1201px) {
+    #header h1 {
+        font-size: 30px;
+    }
+
+    #header-img {
+        height: 50px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    
+}
+
+/* Header styling */
+#header {
+    background-color: #f8f8f8;
+    padding: 10px 40px 10px 10px;
+    border-bottom: 1px solid rgba(231, 154, 63);
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Aligns header to the top of the viewport */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Add space before sections to account for fixed header */
+section {
+    position: relative;
+}
+
+section:before {
+    content: "";
+    display: block;
+    height: 80px; /* Adjust to match header height */
+    margin-top: -80px; /* Adjust to match header height */
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Navbar styling */
+#nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-img {
+    height: 80px;
+}
+
+#nav-bar h1 {
+    margin: 0;
+    font-size: 45px;
+    flex-grow: 1; /* Allows h1 to take remaining space */
+}
+
+#nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 30px;
+}
+
+#nav-bar li {
+    margin-left: 30px;
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.7s;
+}
+
+#nav-bar a:hover {
+    color: rgba(231, 154, 63);
+}
+
+main {
+    padding-top: 80px; /* Adjust to match header height */
+}
+
+/* orange boxes and yt displays */
+
+.gallery-yt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 10px;
+}
+
+.shop-type {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.gallery-one, .gallery-two, .gallery-three {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 20px;
+}
+
+.items {
+    background-color: rgba(231, 154, 63);
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 40px); 
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100px; /* Ensure consistent height */ 
+}
+
+.items p {
+    flex-grow: 1;
+    margin: 0 0 10px;
+}
+
+.items h3 {
+    margin: 0 0 10px;
+}
+
+.items h3:last-of-type {
+    margin-top: auto; /* Pushes the price to the bottom */
+}
+
+/* sign up and save box*/
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+label input {
+  border-radius: 5px;
+  text-align: center;
+  height: 40px;
+  width: 250px;
+}
+
+.email {
+  text-align: center;
+  background-color: rgba(231, 154, 63);
+  padding: 10px 0 30px 0;
+  margin-top: 20px;
+}
+
+#submit {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
